@@ -68,6 +68,32 @@ btnHold.addEventListener("click", function() {
     
 });
 
+//Newgame Functionality
+
+btnNew.addEventListener("click", function() {
+
+    player0El.classList.remove("player--active", "player--winner");
+    player1El.classList.remove("player--active", "player--winner");
+    current0El.textContent = 0;
+    current1El.textContent = 0;
+    score0El.textContent = 0;
+    score1El.textContent = 0;
+
+    scores[0] = 0;
+    scores[1] = 0;
+
+    score0El.textContent = 0;
+    score1El.textContent = 0;
+    diceEl.classList.add("hidden");
+    playing = true;
+    currentScore = 0;
+    activePlayer = 0;
+    player0El.classList.add("player--active");
+    
+});
+
+
+
 //functions :
 
 function switchPlayer() {
